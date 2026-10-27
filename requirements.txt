@@ -1,0 +1,34 @@
+# SVP project requirements — pinned as installed (environment is Python 3.12, pip 24, Windows x64)
+# Audio
+numpy==2.5.4
+scipy==1.18.1
+librosa==1.0.0
+soundfile==0.14.0
+hmmlearn==0.3.3
+scikit-learn==1.9.1
+dtw-python==1.9.0
+praat-parselmouth==0.4.7
+pydub==0.25.1
+numba==0.68.0
+soxr==0.5.0.post2
+# TTS (open services, used only for fallback/synthetic data)
+edge-tts==7.3.1
+gTTS==2.5.4
+# Video
+opencv-python==5.0.0.93
+scenedetect==0.7.2
+ultralytics==8.4.183
+torch==2.14.1
+torchvision==0.29.1
+moviepy==2.2.1
+imageio-ffmpeg==0.6.0
+# App / demo / reporting
+streamlit==1.66.1
+plotly==7.1.0
+pandas==3.0.6
+matplotlib==3.11.2
+playwright==1.64.0
+python-docx==1.2.0
+reportlab==5.0.1
+pillow==11.3.0
+pytest==9.1.1

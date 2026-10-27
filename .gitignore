@@ -1,0 +1,20 @@
+# environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+logs/
+
+# self-packaged artifact (the zip IS the project)
+*.zip
+
+# re-downloadable raw movies (src/video/p3_prepare.py fetches them)
+data/video/raw_*.mp4
+
+# transient capture temp files
+cache/walkthrough/
+cache/app/
+results/P3/user_*.png
+cache/p3/lite_smoke.mp4
+cache/p3/user_clip.mp4

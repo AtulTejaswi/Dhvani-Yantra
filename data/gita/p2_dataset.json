@@ -1,0 +1,987 @@
+{
+  "clips": [
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Madhur_-10%.wav",
+      "verse": "1.1",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Madhur_+0%.wav",
+      "verse": "1.1",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Madhur_+12%.wav",
+      "verse": "1.1",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Swara_-10%.wav",
+      "verse": "1.1",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Swara_+0%.wav",
+      "verse": "1.1",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Swara_+12%.wav",
+      "verse": "1.1",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Manohar_-10%.wav",
+      "verse": "1.1",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Manohar_+0%.wav",
+      "verse": "1.1",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Manohar_+12%.wav",
+      "verse": "1.1",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Sagar_-10%.wav",
+      "verse": "1.1",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Sagar_+0%.wav",
+      "verse": "1.1",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_1_1_Sagar_+12%.wav",
+      "verse": "1.1",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Madhur_-10%.wav",
+      "verse": "2.14",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Madhur_+0%.wav",
+      "verse": "2.14",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Madhur_+12%.wav",
+      "verse": "2.14",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Swara_-10%.wav",
+      "verse": "2.14",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Swara_+0%.wav",
+      "verse": "2.14",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Swara_+12%.wav",
+      "verse": "2.14",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Manohar_-10%.wav",
+      "verse": "2.14",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Manohar_+0%.wav",
+      "verse": "2.14",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Manohar_+12%.wav",
+      "verse": "2.14",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Sagar_-10%.wav",
+      "verse": "2.14",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Sagar_+0%.wav",
+      "verse": "2.14",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_14_Sagar_+12%.wav",
+      "verse": "2.14",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Madhur_-10%.wav",
+      "verse": "2.47",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Madhur_+0%.wav",
+      "verse": "2.47",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Madhur_+12%.wav",
+      "verse": "2.47",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Swara_-10%.wav",
+      "verse": "2.47",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Swara_+0%.wav",
+      "verse": "2.47",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Swara_+12%.wav",
+      "verse": "2.47",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Manohar_-10%.wav",
+      "verse": "2.47",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Manohar_+0%.wav",
+      "verse": "2.47",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Manohar_+12%.wav",
+      "verse": "2.47",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Sagar_-10%.wav",
+      "verse": "2.47",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Sagar_+0%.wav",
+      "verse": "2.47",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_47_Sagar_+12%.wav",
+      "verse": "2.47",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Madhur_-10%.wav",
+      "verse": "2.62",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Madhur_+0%.wav",
+      "verse": "2.62",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Madhur_+12%.wav",
+      "verse": "2.62",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Swara_-10%.wav",
+      "verse": "2.62",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Swara_+0%.wav",
+      "verse": "2.62",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Swara_+12%.wav",
+      "verse": "2.62",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Manohar_-10%.wav",
+      "verse": "2.62",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Manohar_+0%.wav",
+      "verse": "2.62",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Manohar_+12%.wav",
+      "verse": "2.62",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Sagar_-10%.wav",
+      "verse": "2.62",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Sagar_+0%.wav",
+      "verse": "2.62",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_2_62_Sagar_+12%.wav",
+      "verse": "2.62",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Madhur_-10%.wav",
+      "verse": "4.7",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Madhur_+0%.wav",
+      "verse": "4.7",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Madhur_+12%.wav",
+      "verse": "4.7",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Swara_-10%.wav",
+      "verse": "4.7",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Swara_+0%.wav",
+      "verse": "4.7",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Swara_+12%.wav",
+      "verse": "4.7",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Manohar_-10%.wav",
+      "verse": "4.7",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Manohar_+0%.wav",
+      "verse": "4.7",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Manohar_+12%.wav",
+      "verse": "4.7",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Sagar_-10%.wav",
+      "verse": "4.7",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Sagar_+0%.wav",
+      "verse": "4.7",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_7_Sagar_+12%.wav",
+      "verse": "4.7",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Madhur_-10%.wav",
+      "verse": "4.8",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Madhur_+0%.wav",
+      "verse": "4.8",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Madhur_+12%.wav",
+      "verse": "4.8",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Swara_-10%.wav",
+      "verse": "4.8",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Swara_+0%.wav",
+      "verse": "4.8",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Swara_+12%.wav",
+      "verse": "4.8",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Manohar_-10%.wav",
+      "verse": "4.8",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Manohar_+0%.wav",
+      "verse": "4.8",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Manohar_+12%.wav",
+      "verse": "4.8",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Sagar_-10%.wav",
+      "verse": "4.8",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Sagar_+0%.wav",
+      "verse": "4.8",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_4_8_Sagar_+12%.wav",
+      "verse": "4.8",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Madhur_-10%.wav",
+      "verse": "9.22",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Madhur_+0%.wav",
+      "verse": "9.22",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Madhur_+12%.wav",
+      "verse": "9.22",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Swara_-10%.wav",
+      "verse": "9.22",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Swara_+0%.wav",
+      "verse": "9.22",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Swara_+12%.wav",
+      "verse": "9.22",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Manohar_-10%.wav",
+      "verse": "9.22",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Manohar_+0%.wav",
+      "verse": "9.22",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Manohar_+12%.wav",
+      "verse": "9.22",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Sagar_-10%.wav",
+      "verse": "9.22",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Sagar_+0%.wav",
+      "verse": "9.22",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_22_Sagar_+12%.wav",
+      "verse": "9.22",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Madhur_-10%.wav",
+      "verse": "9.26",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Madhur_+0%.wav",
+      "verse": "9.26",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Madhur_+12%.wav",
+      "verse": "9.26",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Swara_-10%.wav",
+      "verse": "9.26",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Swara_+0%.wav",
+      "verse": "9.26",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Swara_+12%.wav",
+      "verse": "9.26",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Manohar_-10%.wav",
+      "verse": "9.26",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Manohar_+0%.wav",
+      "verse": "9.26",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Manohar_+12%.wav",
+      "verse": "9.26",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Sagar_-10%.wav",
+      "verse": "9.26",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Sagar_+0%.wav",
+      "verse": "9.26",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_9_26_Sagar_+12%.wav",
+      "verse": "9.26",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Madhur_-10%.wav",
+      "verse": "10.20",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Madhur_+0%.wav",
+      "verse": "10.20",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Madhur_+12%.wav",
+      "verse": "10.20",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Swara_-10%.wav",
+      "verse": "10.20",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Swara_+0%.wav",
+      "verse": "10.20",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Swara_+12%.wav",
+      "verse": "10.20",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Manohar_-10%.wav",
+      "verse": "10.20",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Manohar_+0%.wav",
+      "verse": "10.20",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Manohar_+12%.wav",
+      "verse": "10.20",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Sagar_-10%.wav",
+      "verse": "10.20",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Sagar_+0%.wav",
+      "verse": "10.20",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_10_20_Sagar_+12%.wav",
+      "verse": "10.20",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Madhur_-10%.wav",
+      "verse": "18.66",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Madhur_+0%.wav",
+      "verse": "18.66",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Madhur_+12%.wav",
+      "verse": "18.66",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-MadhurNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Swara_-10%.wav",
+      "verse": "18.66",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Swara_+0%.wav",
+      "verse": "18.66",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Swara_+12%.wav",
+      "verse": "18.66",
+      "split": "train",
+      "kind": "tts",
+      "voice": "hi-IN-SwaraNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Manohar_-10%.wav",
+      "verse": "18.66",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Manohar_+0%.wav",
+      "verse": "18.66",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Manohar_+12%.wav",
+      "verse": "18.66",
+      "split": "test",
+      "kind": "tts",
+      "voice": "mr-IN-ManoharNeural",
+      "rate": "+12%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Sagar_-10%.wav",
+      "verse": "18.66",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "-10%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Sagar_+0%.wav",
+      "verse": "18.66",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+0%"
+    },
+    {
+      "path": "A:\\SVP project\\project_out\\data\\gita\\verse_18_66_Sagar_+12%.wav",
+      "verse": "18.66",
+      "split": "test",
+      "kind": "tts",
+      "voice": "ne-NP-SagarNeural",
+      "rate": "+12%"
+    }
+  ],
+  "verses": [
+    "1.1",
+    "2.14",
+    "2.47",
+    "2.62",
+    "4.7",
+    "4.8",
+    "9.22",
+    "9.26",
+    "10.20",
+    "18.66"
+  ],
+  "voices": {
+    "train": [
+      "hi-IN-MadhurNeural",
+      "hi-IN-SwaraNeural"
+    ],
+    "test": [
+      "mr-IN-ManoharNeural",
+      "ne-NP-SagarNeural"
+    ]
+  },
+  "n_clips": 120
+}

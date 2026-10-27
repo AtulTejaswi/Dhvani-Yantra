@@ -1,0 +1,529 @@
+{
+  "refs": {
+    "krishna": {
+      "path": "A:\\SVP project\\project_out\\data\\audio\\ref_krishna.wav",
+      "kind": "ok-known"
+    },
+    "dharma": {
+      "path": "A:\\SVP project\\project_out\\data\\audio\\ref_dharma.wav",
+      "kind": "ok-known"
+    },
+    "yoga": {
+      "path": "A:\\SVP project\\project_out\\data\\audio\\ref_yoga.wav",
+      "kind": "ok-known"
+    },
+    "shanti": {
+      "path": "A:\\SVP project\\project_out\\data\\audio\\ref_shanti.wav",
+      "kind": "ok-known"
+    },
+    "om": {
+      "path": "A:\\SVP project\\project_out\\data\\audio\\ref_om.wav",
+      "kind": "ok-known"
+    }
+  },
+  "students": {
+    "krishna": [
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_krishna.wav",
+        "label": "krishna",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_krishna_0_krisna.wav",
+        "label": "krisna",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_krishna_1_kishna.wav",
+        "label": "kishna",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_stretch_15.wav",
+        "label": "stretch_15",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_stretch_30.wav",
+        "label": "stretch_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_stretch_50.wav",
+        "label": "stretch_50",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_stretch_80.wav",
+        "label": "stretch_80",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_noise_35.wav",
+        "label": "noise_35",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_noise_30.wav",
+        "label": "noise_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_noise_22.wav",
+        "label": "noise_22",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_noise_10.wav",
+        "label": "noise_10",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_cut_11_e.wav",
+        "label": "cut_11_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_cut_13_e.wav",
+        "label": "cut_13_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_cut_16_e.wav",
+        "label": "cut_16_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_cut_20_e.wav",
+        "label": "cut_20_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_pitch_1.wav",
+        "label": "pitch_1",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_pitch_2.wav",
+        "label": "pitch_2",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_krishna_pitch_3.wav",
+        "label": "pitch_3",
+        "kind": "perturbation"
+      }
+    ],
+    "dharma": [
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_dharma.wav",
+        "label": "dharma",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_dharma_0_dhram.wav",
+        "label": "dhram",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_dharma_1_dharm.wav",
+        "label": "dharm",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_stretch_15.wav",
+        "label": "stretch_15",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_stretch_30.wav",
+        "label": "stretch_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_stretch_50.wav",
+        "label": "stretch_50",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_stretch_80.wav",
+        "label": "stretch_80",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_noise_35.wav",
+        "label": "noise_35",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_noise_30.wav",
+        "label": "noise_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_noise_22.wav",
+        "label": "noise_22",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_noise_10.wav",
+        "label": "noise_10",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_cut_11_e.wav",
+        "label": "cut_11_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_cut_13_e.wav",
+        "label": "cut_13_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_cut_16_e.wav",
+        "label": "cut_16_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_cut_20_e.wav",
+        "label": "cut_20_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_pitch_1.wav",
+        "label": "pitch_1",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_pitch_2.wav",
+        "label": "pitch_2",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_dharma_pitch_3.wav",
+        "label": "pitch_3",
+        "kind": "perturbation"
+      }
+    ],
+    "yoga": [
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_yoga.wav",
+        "label": "yoga",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_yoga_0_yog.wav",
+        "label": "yog",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_yoga_1_yuga.wav",
+        "label": "yuga",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_stretch_15.wav",
+        "label": "stretch_15",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_stretch_30.wav",
+        "label": "stretch_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_stretch_50.wav",
+        "label": "stretch_50",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_stretch_80.wav",
+        "label": "stretch_80",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_noise_35.wav",
+        "label": "noise_35",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_noise_30.wav",
+        "label": "noise_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_noise_22.wav",
+        "label": "noise_22",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_noise_10.wav",
+        "label": "noise_10",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_cut_11_e.wav",
+        "label": "cut_11_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_cut_13_e.wav",
+        "label": "cut_13_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_cut_16_e.wav",
+        "label": "cut_16_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_cut_20_e.wav",
+        "label": "cut_20_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_pitch_1.wav",
+        "label": "pitch_1",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_pitch_2.wav",
+        "label": "pitch_2",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_yoga_pitch_3.wav",
+        "label": "pitch_3",
+        "kind": "perturbation"
+      }
+    ],
+    "shanti": [
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_shanti.wav",
+        "label": "shanti",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_shanti_0_shant.wav",
+        "label": "shant",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_shanti_1_shanti.wav",
+        "label": "shanti",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_stretch_15.wav",
+        "label": "stretch_15",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_stretch_30.wav",
+        "label": "stretch_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_stretch_50.wav",
+        "label": "stretch_50",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_stretch_80.wav",
+        "label": "stretch_80",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_noise_35.wav",
+        "label": "noise_35",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_noise_30.wav",
+        "label": "noise_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_noise_22.wav",
+        "label": "noise_22",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_noise_10.wav",
+        "label": "noise_10",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_cut_11_e.wav",
+        "label": "cut_11_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_cut_13_e.wav",
+        "label": "cut_13_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_cut_16_e.wav",
+        "label": "cut_16_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_cut_20_e.wav",
+        "label": "cut_20_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_pitch_1.wav",
+        "label": "pitch_1",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_pitch_2.wav",
+        "label": "pitch_2",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_shanti_pitch_3.wav",
+        "label": "pitch_3",
+        "kind": "perturbation"
+      }
+    ],
+    "om": [
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_om.wav",
+        "label": "om",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_om_0_aum.wav",
+        "label": "aum",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\stud_om_1_om.wav",
+        "label": "om",
+        "kind": "tts-student"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_stretch_15.wav",
+        "label": "stretch_15",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_stretch_30.wav",
+        "label": "stretch_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_stretch_50.wav",
+        "label": "stretch_50",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_stretch_80.wav",
+        "label": "stretch_80",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_noise_35.wav",
+        "label": "noise_35",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_noise_30.wav",
+        "label": "noise_30",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_noise_22.wav",
+        "label": "noise_22",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_noise_10.wav",
+        "label": "noise_10",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_cut_11_e.wav",
+        "label": "cut_11_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_cut_13_e.wav",
+        "label": "cut_13_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_cut_16_e.wav",
+        "label": "cut_16_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_cut_20_e.wav",
+        "label": "cut_20_e",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_pitch_1.wav",
+        "label": "pitch_1",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_pitch_2.wav",
+        "label": "pitch_2",
+        "kind": "perturbation"
+      },
+      {
+        "path": "A:\\SVP project\\project_out\\data\\audio\\pert_om_pitch_3.wav",
+        "label": "pitch_3",
+        "kind": "perturbation"
+      }
+    ]
+  },
+  "words": {
+    "krishna": {
+      "deva": "कृष्ण",
+      "roman": "krishna",
+      "variants": [
+        "krisna",
+        "kishna"
+      ]
+    },
+    "dharma": {
+      "deva": "धर्म",
+      "roman": "dharma",
+      "variants": [
+        "dhram",
+        "dharm"
+      ]
+    },
+    "yoga": {
+      "deva": "योग",
+      "roman": "yoga",
+      "variants": [
+        "yog",
+        "yuga"
+      ]
+    },
+    "shanti": {
+      "deva": "शान्ति",
+      "roman": "shanti",
+      "variants": [
+        "shant",
+        "shanti"
+      ]
+    },
+    "om": {
+      "deva": "ॐ",
+      "roman": "om",
+      "variants": [
+        "aum",
+        "om"
+      ]
+    }
+  },
+  "n_students": 90
+}

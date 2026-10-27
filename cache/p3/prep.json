@@ -1,0 +1,22 @@
+{
+  "merged": "A:\\SVP project\\project_out\\data\\video\\movie_30min.mp4",
+  "merged_seconds": 1800.0,
+  "analysis": "A:\\SVP project\\project_out\\cache\\p3\\analysis_640p_10fps.mp4",
+  "sources": [
+    {
+      "Tears-of-Steel": "A:\\SVP project\\project_out\\data\\video\\raw_tears_of_steel_720p.mp4",
+      "licence": "CC-BY-3.0 (Blender Foundation)",
+      "source": "https://archive.org/details/Tears-of-Steel"
+    },
+    {
+      "Sintel": "A:\\SVP project\\project_out\\data\\video\\raw_sintel_512kb.mp4",
+      "licence": "CC-BY-3.0 (Blender Foundation)",
+      "source": "https://archive.org/details/Sintel"
+    },
+    {
+      "ElephantsDream": "A:\\SVP project\\project_out\\data\\video\\raw_elephants_dream_512kb.mp4",
+      "licence": "CC-BY-3.0-US (Blender Foundation)",
+      "source": "https://archive.org/details/ElephantsDream"
+    }
+  ]
+}

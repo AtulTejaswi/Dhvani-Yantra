@@ -1,0 +1,10 @@
+{
+  "alpha": 3.0559861863972166,
+  "identical_mean": 98.21042302439596,
+  "identical_min": 97.53098246077,
+  "monotonic_ok": true,
+  "n_pairs": 5,
+  "n_words": 5,
+  "cross_word_max": 26.42427526629543,
+  "cross_word_mean": 24.025380263262317
+}

@@ -1,0 +1,44 @@
+{
+  "B_cmvn_then_delta_state6": {
+    "cv": 0.15000000000000002,
+    "folds": [
+      0.1,
+      0.2
+    ]
+  },
+  "B_cmvn_then_delta_state8": {
+    "cv": 0.1,
+    "folds": [
+      0.1,
+      0.1
+    ]
+  },
+  "C_static_only_state6": {
+    "cv": 0.1,
+    "folds": [
+      0.1,
+      0.1
+    ]
+  },
+  "C_static_only_state8": {
+    "cv": 0.1,
+    "folds": [
+      0.1,
+      0.1
+    ]
+  },
+  "A_current_state6": {
+    "cv": 0.2,
+    "folds": [
+      0.2,
+      0.2
+    ]
+  },
+  "A_current_state8": {
+    "cv": 0.1,
+    "folds": [
+      0.1,
+      0.1
+    ]
+  }
+}
