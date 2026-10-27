@@ -1,4 +1,4 @@
-# Sanskrit Speech & Video Processing — Assignment Package
+# Dhvani Yantra — Sanskrit Speech & Video Processing Assignment Package
 
 **Student:** Atul Tejaswi
 
