@@ -188,7 +188,7 @@ Dhvani-Yantra/
 
 ---
 
-<div align="small">
+<div align="center">
 
 Built as an academic assignment package · [Issues](https://github.com/AtulTejaswi/Dhvani-Yantra/issues) · Media licences in [`data/SOURCES.md`](data/SOURCES.md)
 
