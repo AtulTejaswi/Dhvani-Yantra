@@ -1,0 +1,224 @@
+{
+  "summary": {
+    "alpha": 3.0559861863972166,
+    "n_pairs": 35,
+    "identical_mean": 97.85620105542493,
+    "alt_voice_same_word_mean": 32.22777624994414,
+    "tts_student_same_word_mean": 45.820671253527536,
+    "cross_word_mean": 24.97882195290633,
+    "note": "All audio is synthetic (Edge-TTS). alt-voice pairs change only the speaker (same word, same text, same engine) so their drop below 'identical' isolates speaker cost; the tts-student drop adds a different TTS voice + romanised text. Human voices are far further from the synthetic reference than two Neural voices are from each other, so these numbers are a lower bound of the speaker penalty a real recording faces. They do NOT validate real-voice accuracy.",
+    "bias_margin_cross_minus_alt": -7.2489542970378125
+  },
+  "pairs": [
+    {
+      "word": "krishna",
+      "kind": "identical",
+      "vs": "krishna",
+      "score": 98.15805335283869
+    },
+    {
+      "word": "krishna",
+      "kind": "alt-voice-same-word",
+      "vs": "krishna",
+      "score": 32.850719382593965
+    },
+    {
+      "word": "krishna",
+      "kind": "tts-student-same-word",
+      "vs": "krishna",
+      "score": 49.62719107441815
+    },
+    {
+      "word": "krishna",
+      "kind": "cross-word",
+      "vs": "dharma",
+      "score": 28.040473899832374
+    },
+    {
+      "word": "krishna",
+      "kind": "cross-word",
+      "vs": "yoga",
+      "score": 24.49973180778756
+    },
+    {
+      "word": "krishna",
+      "kind": "cross-word",
+      "vs": "shanti",
+      "score": 21.280629357402212
+    },
+    {
+      "word": "krishna",
+      "kind": "cross-word",
+      "vs": "om",
+      "score": 19.0176311838513
+    },
+    {
+      "word": "dharma",
+      "kind": "identical",
+      "vs": "dharma",
+      "score": 97.89704183738256
+    },
+    {
+      "word": "dharma",
+      "kind": "alt-voice-same-word",
+      "vs": "dharma",
+      "score": 37.827439906163704
+    },
+    {
+      "word": "dharma",
+      "kind": "tts-student-same-word",
+      "vs": "dharma",
+      "score": 40.54117984467283
+    },
+    {
+      "word": "dharma",
+      "kind": "cross-word",
+      "vs": "krishna",
+      "score": 27.830179736773363
+    },
+    {
+      "word": "dharma",
+      "kind": "cross-word",
+      "vs": "yoga",
+      "score": 39.480885109598724
+    },
+    {
+      "word": "dharma",
+      "kind": "cross-word",
+      "vs": "shanti",
+      "score": 23.654811930929128
+    },
+    {
+      "word": "dharma",
+      "kind": "cross-word",
+      "vs": "om",
+      "score": 24.822419810444725
+    },
+    {
+      "word": "yoga",
+      "kind": "identical",
+      "vs": "yoga",
+      "score": 97.76031512896633
+    },
+    {
+      "word": "yoga",
+      "kind": "alt-voice-same-word",
+      "vs": "yoga",
+      "score": 32.87426581888925
+    },
+    {
+      "word": "yoga",
+      "kind": "tts-student-same-word",
+      "vs": "yoga",
+      "score": 33.23260039725582
+    },
+    {
+      "word": "yoga",
+      "kind": "cross-word",
+      "vs": "krishna",
+      "score": 24.24018645593745
+    },
+    {
+      "word": "yoga",
+      "kind": "cross-word",
+      "vs": "dharma",
+      "score": 39.19002626915435
+    },
+    {
+      "word": "yoga",
+      "kind": "cross-word",
+      "vs": "shanti",
+      "score": 21.070841218544302
+    },
+    {
+      "word": "yoga",
+      "kind": "cross-word",
+      "vs": "om",
+      "score": 28.67307911759801
+    },
+    {
+      "word": "shanti",
+      "kind": "identical",
+      "vs": "shanti",
+      "score": 98.29012736525814
+    },
+    {
+      "word": "shanti",
+      "kind": "alt-voice-same-word",
+      "vs": "shanti",
+      "score": 34.71981922448414
+    },
+    {
+      "word": "shanti",
+      "kind": "tts-student-same-word",
+      "vs": "shanti",
+      "score": 58.27524613398353
+    },
+    {
+      "word": "shanti",
+      "kind": "cross-word",
+      "vs": "krishna",
+      "score": 21.848919001809183
+    },
+    {
+      "word": "shanti",
+      "kind": "cross-word",
+      "vs": "dharma",
+      "score": 23.653443999148763
+    },
+    {
+      "word": "shanti",
+      "kind": "cross-word",
+      "vs": "yoga",
+      "score": 19.07585342909379
+    },
+    {
+      "word": "shanti",
+      "kind": "cross-word",
+      "vs": "om",
+      "score": 20.315858966919432
+    },
+    {
+      "word": "om",
+      "kind": "identical",
+      "vs": "om",
+      "score": 97.17546759267898
+    },
+    {
+      "word": "om",
+      "kind": "alt-voice-same-word",
+      "vs": "om",
+      "score": 22.866636917589652
+    },
+    {
+      "word": "om",
+      "kind": "tts-student-same-word",
+      "vs": "om",
+      "score": 47.42713881730734
+    },
+    {
+      "word": "om",
+      "kind": "cross-word",
+      "vs": "krishna",
+      "score": 18.233260080140816
+    },
+    {
+      "word": "om",
+      "kind": "cross-word",
+      "vs": "dharma",
+      "score": 24.91457696959052
+    },
+    {
+      "word": "om",
+      "kind": "cross-word",
+      "vs": "yoga",
+      "score": 29.25083049914089
+    },
+    {
+      "word": "om",
+      "kind": "cross-word",
+      "vs": "shanti",
+      "score": 20.4828002144297
+    }
+  ]
+}

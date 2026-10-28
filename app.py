@@ -22,6 +22,7 @@ for _sub in ("src", r"src\speech_a", r"src\speech_b", r"src\video"):
 sys.path.insert(0, str(OUT_DIR))
 
 import lib_audio as LA            # noqa: E402
+import p1_audio as PA             # noqa: E402  (mic/upload decode + validation)
 OK = lambda p: Path(p).exists()   # noqa: E731
 
 st.set_page_config(page_title="Sanskrit Speech + Video Project",
@@ -102,6 +103,36 @@ def p1_audio_bytes(bts: bytes | None, suffix=".wav") -> Path | None:
     return p
 
 
+# ---------------------------------------------------------------------------
+# P1 microphone/upload source handling (explicit, never a silent fallback)
+# ---------------------------------------------------------------------------
+MIC_LBL = "🎙️ Microphone take"
+UP_LBL = "📁 Uploaded file"
+BUND_LBL = "📚 Bundled sample"
+_SRC_MODE = {MIC_LBL: "microphone", UP_LBL: "upload", BUND_LBL: "bundled"}
+
+
+def forget_take():
+    """Discard callback: drop the stored take and reset the recorder widget."""
+    st.session_state.pop("p1_take", None)
+    st.session_state.pop("p1_mic", None)
+
+
+def refresh_take(take: PA.Take, th: PA.Thresholds) -> None:
+    """(Re)validate a stored take under the thresholds currently in effect."""
+    take.th = th
+    try:
+        proc = PA.preprocess_audio(take.data, thresholds=th,
+                                   hint_name="microphone recording")
+        take.proc, take.error, take.code = proc, None, None
+        take.saved_path = str(PA.write_wav(
+            CACHE_DIR / f"p1_take_{take.digest}.wav", proc.y))
+    except PA.AudioValidationError as e:
+        take.proc = None
+        take.error = str(e)
+        take.code = e.code
+
+
 # ===========================================================================
 # SIDEBAR
 # ===========================================================================
@@ -129,9 +160,15 @@ tab1, tab2, tab3 = st.tabs(
 # ===========================================================================
 with tab1:
     st.header("Speech A — Pronunciation Assessment (MFCC + spectral features, DTW)")
-    st.caption("Reference vs student take of a Sanskrit word; similarity %, segment-"
-               "level diagnosis and full plots. References are **synthetic** "
-               "(Edge TTS Devanagari) where marked.")
+    st.caption("Reference vs student take of a Sanskrit word; similarity "
+               "**estimate** + segment-level diagnosis and full plots. "
+               "References are **synthetic** (Edge TTS Devanagari) where "
+               "marked, so the score measures acoustic closeness — not "
+               "validated phonetic accuracy.")
+    st.caption("Speaker-bias probe (results/P1/speaker_bias.json): changing "
+               "only the synthetic speaker already drops same-word scores to "
+               "~32% (cross-word baseline ~25%) — a real human voice will "
+               "score lower than synthetic pairs regardless of pronunciation.")
     meta1 = load_p1_meta()
     if not meta1:
         st.error("P1 dataset missing - run project_out/src/speech_a/p1_build_data.py")
@@ -142,21 +179,167 @@ with tab1:
                              format_func=lambda k: f"{k}  ({meta1['words'][k]['deva']})")
         entries = meta1["students"][word]
         labels = [f"{i+1}. {e['label']} ({e['kind']})" for i, e in enumerate(entries)]
-        pick = c1.selectbox("Student take (or upload/record below)", labels)
+        pick = c1.selectbox("Bundled student take", labels)
         up = c2.file_uploader("...or upload your own pronunciation (wav/mp3)",
                               type=["wav", "mp3", "ogg", "flac", "m4a"])
-        rec = c2.audio_input("...or record now (microphone)")
+        rec = c2.audio_input("...or record now (microphone)", key="p1_mic")
+
+        # ---- configurable validation thresholds -------------------------
+        with st.expander("⚙️ Recording validation thresholds (configurable)"):
+            tc1, tc2, tc3 = st.columns(3)
+            th_min_dur = tc1.number_input(
+                "Minimum clip length (s)", 0.05, 10.0,
+                float(PA.THRESHOLDS.min_duration_s), 0.05)
+            th_min_speech = tc1.number_input(
+                "Minimum speech (s)", 0.02, 3.0,
+                float(PA.THRESHOLDS.min_speech_s), 0.01)
+            th_min_peak = tc2.number_input(
+                "Minimum peak (dBFS)", -80.0, -6.0,
+                float(20 * np.log10(PA.THRESHOLDS.min_peak)), 1.0)
+            th_min_rms = tc2.number_input(
+                "Minimum RMS (dBFS)", -90.0, -20.0,
+                float(20 * np.log10(PA.THRESHOLDS.min_rms)), 1.0)
+            th_clip = tc3.number_input(
+                "Max clipped samples (%)", 0.0, 10.0,
+                100 * PA.THRESHOLDS.max_clipped_frac, 0.1)
+            th_top_db = tc3.number_input(
+                "Silence trim (dB below peak)", 10.0, 60.0,
+                float(PA.THRESHOLDS.silence_top_db), 1.0)
+        th = PA.Thresholds(
+            min_duration_s=th_min_dur, min_speech_s=th_min_speech,
+            min_peak=10.0 ** (th_min_peak / 20.0),
+            min_rms=10.0 ** (th_min_rms / 20.0),
+            max_clipped_frac=th_clip / 100.0, silence_top_db=th_top_db)
+        st.caption("Defaults match the calibrated pipeline (35 dB silence "
+                   "trim, 20 ms pad, as in lib_audio.trim_silence).")
+
+        # ---- recording state: a take is tagged with the word said into it
+        if rec is not None and rec.getvalue():
+            raw_b = bytes(rec.getvalue())
+            tk, is_new = PA.accept_take(st.session_state.get("p1_take"),
+                                        raw_b, word)
+            st.session_state["p1_take"] = tk
+            if is_new or tk.th != th:
+                refresh_take(tk, th)
+            if is_new:
+                # the user just recorded: make that source explicit + selected
+                st.session_state["p1_src"] = MIC_LBL
+        if up is not None and up.getvalue():
+            ud = hashlib.md5(bytes(up.getvalue())).hexdigest()
+            if st.session_state.get("p1_upl_digest") != ud:
+                st.session_state["p1_upl_digest"] = ud
+                st.session_state["p1_src"] = UP_LBL
+
+        # ---- explicit input source (never a silent fallback) -------------
+        src_lbl = st.radio("Input source to score",
+                           [MIC_LBL, UP_LBL, BUND_LBL],
+                           horizontal=True, index=2, key="p1_src")
+        mode = _SRC_MODE[src_lbl]
+        take = st.session_state.get("p1_take")
+
+        # ---- recording review workflow (before any analysis) ------------
+        if mode == "microphone":
+            st.markdown("#### 🎙️ Review your recording")
+            if take is None:
+                st.info("No recording yet — press **Start recording**, say "
+                        f"**{word}**, then stop. You can listen back and "
+                        "retake before scoring.")
+            else:
+                if take.word != word:
+                    st.warning(
+                        f"⚠️ This take was recorded for **{take.word}**, but "
+                        f"**{word}** is selected now — it will not be scored. "
+                        "Discard it and record the selected word.")
+                if take.error:
+                    st.error("**Recording rejected — recording-quality "
+                             "problem, not a pronunciation result**")
+                    st.markdown(take.error)
+                else:
+                    p = take.proc
+                    st.caption("Raw recording — listen back before analysis:")
+                    st.audio(take.data, format=take.mime or "audio/wav")
+                    q1, q2, q3, q4 = st.columns(4)
+                    q1.metric("Duration (scored)", f"{p.duration_s:.2f} s",
+                              f"raw {p.raw_duration_s:.2f} s")
+                    q2.metric("Peak level", f"{p.peak_dbfs:.1f} dBFS")
+                    q3.metric("RMS level", f"{p.rms_dbfs:.1f} dBFS")
+                    q4.metric("Clipped samples",
+                              f"{100 * p.clipped_frac:.2f} %",
+                              "✅ ok" if p.clipped_frac <= th.max_clipped_frac
+                              else "⚠️ over limit")
+                    st.caption(
+                        f"container `{p.fmt}` • captured at {p.native_sr} Hz • "
+                        f"{p.n_channels} ch → mono {p.sr} Hz float32 • "
+                        f"silence-trimmed {p.trim_start_s:.2f}–"
+                        f"{p.trim_end_s:.2f} s"
+                        + (f" • ⚠️ {'; '.join(p.warnings)}"
+                           if p.warnings else ""))
+                    import matplotlib
+                    matplotlib.use("Agg")
+                    import matplotlib.pyplot as plt
+                    mins, maxs = PA.waveform_peaks(p.raw_y, n=800)
+                    tt = np.linspace(0.0, p.raw_duration_s, len(mins))
+                    fig, ax = plt.subplots(figsize=(9, 1.6))
+                    ax.fill_between(tt, mins, maxs, color="tab:blue",
+                                    linewidth=0)
+                    ax.axvspan(p.trim_start_s, p.trim_end_s,
+                               color="tab:green", alpha=0.10,
+                               label="scored region")
+                    ax.set_xlim(0, max(p.raw_duration_s, 1e-3))
+                    ax.set_ylim(-1.05, 1.05)
+                    ax.set_xlabel("time (s)")
+                    ax.set_ylabel("amplitude")
+                    ax.legend(loc="upper right", fontsize=7)
+                    st.pyplot(fig, clear_figure=True)
+                    st.caption("Processed audio (what is actually scored) — "
+                               "silence-trimmed, level-normalised 16 kHz mono:")
+                    st.audio(PA.wav_bytes(p.y), format="audio/wav")
+                st.button("🗑️ Discard take & retake", key="p1_discard",
+                          on_click=forget_take)
+        elif mode == "upload":
+            st.markdown("#### 📁 Uploaded file")
+            ub = bytes(up.getvalue()) if up is not None else None
+            if not ub:
+                st.info("Choose an audio file above "
+                        "(wav/mp3/ogg/flac/m4a).")
+            else:
+                try:
+                    pu = PA.preprocess_audio(ub, thresholds=th,
+                                             hint_name=up.name or "upload")
+                    st.caption(f"✅ `{up.name}` decodes as {pu.fmt}, "
+                               f"{pu.duration_s:.2f} s, peak "
+                               f"{pu.peak_dbfs:.1f} dBFS, "
+                               f"{100 * pu.clipped_frac:.2f} % clipped.")
+                except PA.AudioValidationError as e:
+                    st.error("**Upload rejected — input problem**")
+                    st.markdown(str(e))
+        else:
+            st.markdown("#### 📚 Bundled student sample")
+            st.caption(f"Validated synthetic dataset take: **{pick}** — "
+                       "selected from the list above.")
+
         stu_btn = st.button("🔎 Compare & score", type="primary")
         res_box = st.container()
 
-        def run_compare(stu_path: Path, stu_label: str):
+        def run_compare(stu_path: Path, stu_label: str, kind: str = "bundled",
+                        proc: PA.ProcessedAudio | None = None,
+                        raw_bytes: bytes | None = None,
+                        mime: str | None = None):
+            icon = {"microphone": "🎙️", "upload": "📁"}.get(kind, "📚")
             with res_box:
                 with st.spinner("aligning (DTW) + scoring..."):
                     ref_path = meta1["refs"][word]["path"]
                     d, ref_feat, stu_feat, score, v_err, c_err, verdict = \
                         p1_analyse(ref_path, str(stu_path), 0, 0)
                 st.markdown(
-                    f"## Pronunciation similarity: **{score:.0f}%**")
+                    f"## Pronunciation similarity estimate: **{score:.0f}%**")
+                st.caption(
+                    "Similarity **estimate** from MFCC + spectral DTW against "
+                    "a **synthetic** reference — a relative match indicator, "
+                    "not validated phonetic accuracy. Recording level, "
+                    "clipping and duration issues lower it independently of "
+                    "how the word was pronounced.")
+                st.markdown(f"**Input source:** {icon} {stu_label}")
                 st.markdown(f"**Verdict**: {verdict}")
                 m1, m2, m3, m4 = st.columns(4)
                 m1.metric("MFCC DTW cost", f"{d['d_mfcc']:.4f}")
@@ -203,22 +386,58 @@ with tab1:
                 png = OUT_DIR / "results" / "P1" / f"P1_{word}.png"
                 if png.exists():
                     st.image(str(png), caption="Reference-vs-student analysis chart")
+                if raw_bytes is not None and proc is not None:
+                    st.markdown("**Raw capture vs processed (scored) audio**")
+                    r1, r2 = st.columns(2)
+                    r1.caption("raw recording")
+                    r1.audio(raw_bytes, format=mime or "audio/wav")
+                    r2.caption("processed — trimmed + normalised")
+                    r2.audio(PA.wav_bytes(proc.y), format="audio/wav")
                 c1d, c2d = st.columns(2)
+                c1d.caption("reference")
                 c1d.audio(str(ref_path))
                 if str(stu_path) != ref_path:
+                    c2d.caption("student take (as scored)")
                     c2d.audio(str(stu_path))
 
         if stu_btn:
-            src = None
-            if up is not None:
-                src = p1_audio_bytes(up.getvalue(), suffix=Path(up.name).suffix or ".wav")
-            elif rec is not None:
-                src = p1_audio_bytes(rec.getvalue())
-            if src is None:
-                src = Path(entries[int(pick.split(".")[0]) - 1]["path"])
-            run_compare(src, pick)
+            up_bytes = bytes(up.getvalue()) if up is not None else None
+            try:
+                if take is not None and take.word == word:
+                    refresh_take(take, th)   # current thresholds, fresh decode
+                choice = PA.choose_student_source(
+                    mode, take=take, word=word, upload=up_bytes,
+                    upload_name=(up.name if up is not None else ""),
+                    bundled_path=str(
+                        entries[int(pick.split(".")[0]) - 1]["path"]),
+                    bundled_label=pick)
+                if choice.kind == "bundled":
+                    run_compare(Path(choice.path), choice.label, "bundled")
+                else:
+                    if choice.kind == "microphone":
+                        proc = take.proc        # just refreshed above
+                    else:
+                        proc = PA.preprocess_audio(choice.data, thresholds=th,
+                                                   hint_name=choice.label)
+                    digest = hashlib.md5(choice.data).hexdigest()
+                    score_path = PA.write_wav(
+                        CACHE_DIR / f"p1_{choice.kind}_{digest}.wav", proc.y)
+                    run_compare(score_path, choice.label, choice.kind, proc,
+                                choice.data, choice.mime)
+            except PA.AudioValidationError as e:
+                with res_box:
+                    st.error(f"**Not scored — input problem ({e.code})**")
+                    st.markdown(e.message)
+                    if e.hint:
+                        st.markdown(f"💡 {e.hint}")
+                    st.caption("This is an input/recording-quality failure, not "
+                               "a pronunciation result — no similarity score "
+                               "was produced.")
         else:
-            res_box.info("Choose a word + student take, then press **Compare & score**.")
+            res_box.info(
+                "Pick an **input source**, then press **Compare & score**. "
+                "🎙️ Record the selected word, listen back, and retake if "
+                "needed.")
 
         st.divider()
         st.markdown("### All results (validation table)")
