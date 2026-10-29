@@ -99,6 +99,10 @@ def run_yolo(ana: Path) -> None:
 
 
 def fallback_hog(ana: Path) -> None:
+    if not hasattr(cv2, "HOGDescriptor"):
+        print("[p3-track] FALLBACK unavailable: this OpenCV build has no "
+              "HOGDescriptor; skipping tracking")
+        return
     print("[p3-track] FALLBACK: OpenCV HOG person detector + centroid tracker")
     cap = cv2.VideoCapture(str(ana))
     hog = cv2.HOGDescriptor(); hog.setSVMDetector(

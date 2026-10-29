@@ -37,12 +37,37 @@ def set_seed(seed: int = 1729) -> None:
 # ---------------------------------------------------------------------------
 
 def load_audio(path: str, sr: int = SR) -> np.ndarray:
-    y, _ = librosa.load(path, sr=sr, mono=True)
+    try:
+        y, _ = librosa.load(path, sr=sr, mono=True)
+    except Exception:
+        # Fallback for containers librosa/soundfile cannot read (WebM, MP4, ...)
+        # — decode with the bundled ffmpeg first, as the microphone pipeline does.
+        import subprocess, tempfile, os
+        try:
+            from lib_data import ffmpeg_exe as _ffe
+            exe = _ffe()
+        except Exception:
+            exe = "ffmpeg"
+        fd, tmp = tempfile.mkstemp(suffix=".wav")
+        os.close(fd)
+        try:
+            subprocess.run([exe, "-y", "-loglevel", "error", "-i", str(path),
+                            "-ac", "1", "-ar", str(sr), tmp],
+                           check=True, capture_output=True, timeout=120)
+            y, _ = librosa.load(tmp, sr=sr, mono=True)
+        finally:
+            try:
+                os.remove(tmp)
+            except OSError:
+                pass
     y = y.astype(np.float32)
     y = trim_silence(y, sr)
     if len(y) < 0.05 * sr:  # degenerate file
-        y, _ = librosa.load(path, sr=sr, mono=True)
-        y = y.astype(np.float32)
+        try:
+            y2, _ = librosa.load(path, sr=sr, mono=True)
+            y = y2.astype(np.float32)
+        except Exception:
+            pass
     return y
 
 
